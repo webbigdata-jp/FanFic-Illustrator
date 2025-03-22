@@ -1,0 +1,186 @@
+[model]
+path = "cagliostrolab/animagine-xl-4.0"
+min_image_size = 512
+max_image_size = 2048
+use_torch_compile = false
+enable_cpu_offload = false
+output_dir = "./outputs"
+
+[prompts]
+default_negative = "lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer digits, cropped, worst quality, low quality, low score, bad score, average score, signature, watermark, username, blurry"
+default_aspect_ratio = "832 x 1216"
+
+[text_to_prompt]
+enabled = true
+default_category = "general"
+default_series = "original"
+default_character = "original character"
+
+[text_to_prompt.series]
+list = [
+    "original|特定の原作なし",
+    "touhou|東方Project",
+    "vocaloid|ボーカロイド",
+    "kantai collection|艦隊これくしょん",
+    "touken ranbu|刀剣乱舞"
+]
+
+[text_to_prompt.characters]
+list = [
+    "original character|オリジナルキャラクター",
+    "kaga (kancolle)|加賀（艦これ）",
+    "shimakaze (kancolle)|島風（艦これ）",
+    "hibiki (kancolle)|響（艦これ）",
+    "shigure (kancolle)|時雨（艦これ）",
+    "kongou (kancolle)|金剛（艦これ）",
+    "hatsune miku|初音ミク",
+    "kagamine rin|鏡音リン",
+    "kagamine len|鏡音レン",
+    "megurine luka|巡音ルカ",
+    "yuzuki yukari|結月ゆかり",
+    "hakurei reimu|博麗霊夢",
+    "kirisame marisa|霧雨魔理沙",
+    "izayoi sakuya|十六夜咲夜",
+    "remilia scarlet|レミリア・スカーレット",
+    "flandre scarlet|フランドール・スカーレット",
+    "mikazuki munechika|三日月宗近",
+    "kashuu kiyomitsu|加州清光",
+    "yamato-no-kami yasusada|大和守安定",
+    "tsurumaru kuninaga|鶴丸国永",
+    "namazuo toushirou|鯰尾藤四郎"
+]
+
+# キャラクターとシリーズの紐付け
+[text_to_prompt.character_series_mapping]
+"original" = [
+    "original character"
+]
+"touhou" = [
+    "hakurei reimu",
+    "kirisame marisa",
+    "izayoi sakuya",
+    "remilia scarlet",
+    "flandre scarlet"
+]
+"vocaloid" = [
+    "hatsune miku",
+    "kagamine rin",
+    "kagamine len",
+    "megurine luka",
+    "yuzuki yukari"
+]
+"kantai collection" = [
+    "kaga (kancolle)",
+    "shimakaze (kancolle)",
+    "hibiki (kancolle)",
+    "shigure (kancolle)",
+    "kongou (kancolle)"
+]
+"touken ranbu" = [
+    "mikazuki munechika",
+    "kashuu kiyomitsu",
+    "yamato-no-kami yasusada",
+    "tsurumaru kuninaga",
+    "namazuo toushirou"
+]
+
+[text_to_prompt.categories]
+list = [
+    "general",
+    "sensitive"
+]
+
+[samplers]
+list = [
+    "DPM++ 2M Karras",
+    "DPM++ SDE Karras",
+    "DPM++ 2M SDE Karras",
+    "Euler",
+    "Euler a",
+    "DDIM"
+]
+
+[aspect_ratios]
+list = [
+    "1024 x 1024",
+    "1152 x 896",
+    "896 x 1152",
+    "1216 x 832",
+    "832 x 1216",
+    "1344 x 768",
+    "768 x 1344",
+    "1536 x 640",
+    "640 x 1536",
+    "Custom"
+]
+
+[[styles]]
+name = "(None)"
+prompt = "{prompt}"
+negative_prompt = ""
+
+[[styles]]
+name = "Anim4gine"
+prompt = "{prompt}, depth of field, faux traditional media, painterly, impressionism, photo background"
+negative_prompt = ""
+
+[[styles]]
+name = "Painting"
+prompt = "{prompt}, painterly, painting (medium)"
+negative_prompt = ""
+
+[[styles]]
+name = "Pixel art"
+prompt = "{prompt}, pixel art"
+negative_prompt = ""
+
+[[styles]]
+name = "1980s"
+prompt = "{prompt}, 1980s (style), retro artstyle"
+negative_prompt = ""
+
+[[styles]]
+name = "1990s"
+prompt = "{prompt}, 1990s (style), retro artstyle"
+negative_prompt = ""
+
+[[styles]]
+name = "2000s"
+prompt = "{prompt}, 2000s (style), retro artstyle"
+negative_prompt = ""
+
+[[styles]]
+name = "Toon"
+prompt = "{prompt}, toon (style)"
+negative_prompt = ""
+
+[[styles]]
+name = "Lineart"
+prompt = "{prompt}, lineart, thick lineart"
+negative_prompt = ""
+
+[[styles]]
+name = "Art Nouveau"
+prompt = "{prompt}, art nouveau"
+negative_prompt = ""
+
+[[styles]]
+name = "Western Comics"
+prompt = "{prompt}, western comics (style)"
+negative_prompt = ""
+
+[[styles]]
+name = "3D"
+prompt = "{prompt}, 3d"
+negative_prompt = ""
+
+[[styles]]
+name = "Realistic"
+prompt = "{prompt}, realistic, photorealistic"
+negative_prompt = ""
+
+[[styles]]
+name = "Neonpunk"
+prompt = "{prompt}, neonpunk"
+negative_prompt = ""
+

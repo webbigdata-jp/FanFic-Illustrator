@@ -1,0 +1,224 @@
+/* Enhanced CSS for FanFic Illustrator */
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #4a69bd, #6a89cc);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.subtitle-inline {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e4e8;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #4a69bd;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+}
+
+/* Improved button styling */
+.primary-button {
+    background-color: #4a69bd !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 0.7rem 1.2rem !important;
+    border-radius: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.primary-button:hover {
+    background-color: #3a539b !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Improved AI output styling with better contrast */
+.thinking-output-label {
+    font-weight: 600 !important;
+    color: #4285f4 !important;
+    background-color: transparent !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    margin-top: 0.5rem !important;
+}
+
+.thinking-output {
+    background-color: #f0f7ff !important;
+    border-left: 4px solid #4285f4 !important;
+    padding: 12px !important;
+    border-radius: 6px !important;
+    font-size: 0.95rem !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+}
+
+.generated-prompt-label {
+    font-weight: 600 !important;
+    color: #34a853 !important;
+    background-color: transparent !important;
+    margin-bottom: 4px !important;
+    margin-top: 16px !important;
+    display: block !important;
+}
+
+.generated-prompt {
+    background-color: #f0fff4 !important;
+    border-left: 4px solid #34a853 !important;
+    padding: 12px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    color: #333 !important;
+}
+
+.text-input-area {
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+}
+
+/* Add animation for loading states */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Gallery improvements */
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+/* Form element styling */
+input, select, textarea {
+    border-radius: 6px !important;
+    border: 1px solid #d0d7de !important;
+    padding: 8px 12px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4a69bd !important;
+    box-shadow: 0 0 0 3px rgba(74, 105, 189, 0.1) !important;
+}
+
+/* Dropdown styling */
+.gr-dropdown {
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.gr-dropdown:hover {
+    border-color: #4a69bd !important;
+}
+
+/* Accordion styling */
+.gr-accordion {
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.gr-accordion-title {
+    font-weight: 600 !important;
+    color: #4a69bd !important;
+    padding: 10px 15px !important;
+}
+
+/* Label styling to improve readability */
+.gr-label {
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+    color: #444 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle-inline {
+        font-size: 1.1rem;
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+    
+    .primary-button {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Textbox focus state improvement */
+.gr-textbox:focus-within {
+    border-color: #4a69bd !important;
+    box-shadow: 0 0 0 3px rgba(74, 105, 189, 0.1) !important;
+}
+
+/* Gallery container styling */
+.gr-gallery {
+    background-color: #f8f9fa !important;
+    border-radius: 8px !important;
+    padding: 4px !important;
+    margin-bottom: 16px !important;
+}
+
+/* Gallery item caption styling */
+.gr-gallery-item-caption {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
+    border-radius: 0 0 8px 8px !important;
+    padding: 8px !important;
+}
+
